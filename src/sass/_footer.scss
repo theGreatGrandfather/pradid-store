@@ -1,0 +1,34 @@
+footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    background-color: #e7e7e7;
+}
+.footer__body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    margin-left: auto;
+    gap: 5vw;
+    margin-right: auto;
+    width: 100vw;
+}
+.footer__text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    color: $primery-text-color;
+}
+.footer__created-list{
+    display: flex;
+    gap: 5vw;
+}
+.footer__created-link{
+    text-decoration: underline;
+}

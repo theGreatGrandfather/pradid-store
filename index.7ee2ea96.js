@@ -1,0 +1,2 @@
+const e=document.querySelector(".header__burger"),t=document.querySelector(".header__menu"),c=document.querySelector(".header__contacts"),l=document.querySelector("body");e.addEventListener("click",(o=>{o.preventDefault(),console.log(o.target),o.target!==e&&o.target!==e.firstElementChild||(e.classList.toggle("active"),t.classList.toggle("active"),c.classList.toggle("active"),l.classList.toggle("lock"))}));
+//# sourceMappingURL=index.7ee2ea96.js.map

@@ -3,10 +3,38 @@
     <div class="header__body">
       <div class="header__top">
         <a href="#" class="header__logo">
-          <img src="images/logo.jpg" alt="logo" class="header__logo-img">
+          <img src="images/logo.webp" alt="logo" class="header__logo-img">
         </a>
-        <input class="header__top-search" type="text" name="search">
-        <button type='button' class='__btn'>Моє замовлення</button>
+
+        <form class="header__top-form">
+          <input class="header__top-search" type="text" name="search">
+          <button class="header__top-btn" type="submit">
+            <svg class='header__top__icon'>
+              <use href='./sprite.svg#icon-search'>
+              </use>
+            </svg>
+          </button>
+        </form>
+        <button type='button' class='header__btn-call'>
+          <svg class='btn-call__icon'>
+            <use href='./sprite.svg#icon-phone'></use>
+          </svg>
+          <p class="btn-call__text">Замовити дзвінок</p>
+        </button>
+
+        <a rel='noopener no-referrel nofollow' class='basket__link _link' href='#'>
+          <div class='basket__decorative-container'>
+            <svg class='basket__icon'>
+              <use href='./sprite.svg#icon-cart'></use>
+            </svg>
+            <p class='basket__quantity'>5</p>
+          </div>
+          <div class='basket__description-container'>
+            <p class='basket__name'>Моє замовлення</p>
+            <p class='basket__sum'>115 грн</p>
+          </div>
+        </a>
+
       </div>
 
       <div class='header__bottom'>
@@ -16,22 +44,19 @@
         <nav class="header__menu">
           <ul class="header__list">
             <li>
-              <a href="#" class="header__link">Гланая</a>
+              <a href="#" class="header__link">Клієнтам</a>
             </li>
             <li>
-              <a href="#" class="header__link">Уроки</a>
+              <a href="#" class="header__link">Товари для майнінгу</a>
             </li>
             <li>
-              <a href="#" class="header__link">Шпаргалки</a>
+              <a href="#" class="header__link">SSD накопичувачі, флеш пам'ять</a>
             </li>
             <li>
-              <a href="#" class="header__link">Полезное</a>
+              <a href="#" class="header__link">Масла для генераторів</a>
             </li>
             <li>
-              <a href="#" class="header__link">О канале</a>
-            </li>
-            <li>
-              <a href="#" class="header__link">Контакты</a>
+              <a href="#" class="header__link">Товари для дому</a>
             </li>
           </ul>
         </nav>

@@ -2,6 +2,9 @@
   <div class='container'>
     <div class="header__body">
       <div class="header__top">
+        <div class="header__burger">
+          <span></span>
+        </div>
         <a href="#" class="header__logo">
           <img src="images/logo.webp" alt="logo" class="header__logo-img">
         </a>
@@ -38,9 +41,7 @@
       </div>
 
       <div class='header__bottom'>
-        <div class="header__burger">
-          <span></span>
-        </div>
+
         <nav class="header__menu">
           <ul class="header__list">
             <li>
@@ -64,32 +65,40 @@
         <ul class="header__contacts _list">
 
           <li>
-            <a href="tel:+380992235552" class="header__link" rel='noopener no-referrel nofollow'>
+            <a href="tel:+380992235552" class="header__contacts__link" rel='noopener no-referrel nofollow'>
               <svg class='btn-call__icon'>
                 <use href='./sprite.svg#icon-phone'></use>
               </svg>
-              099 223 5552
+              <p> 099 223 5552</p>
             </a>
           </li>
           <li>
-            <a href="https://t.me/praidid" class="header__link" rel='noopener no-referrel nofollow'>
+            <a href="https://t.me/praidid" class="header__contacts__link" rel='noopener no-referrel nofollow'>
               <svg class='btn-call__icon'>
                 <use href='./sprite.svg#icon-phone'></use>
               </svg>
-              Telegram
+              <p>Telegram</p>
             </a>
           </li>
           <li>
-            <a href="mailto:o.pradidenko@gmail.com" class="header__link" rel='noopener no-referrel nofollow'>
+            <a href="mailto:o.pradidenko@gmail.com" class="header__contacts__link" rel='noopener no-referrel nofollow'>
               <svg class='btn-call__icon'>
                 <use href='./sprite.svg#icon-phone'></use>
               </svg>
-              Написати на e-mail
+              <p>Написати на e-mail</p>
             </a>
           </li>
 
         </ul>
-        <!-- рабоч время -->
+        <div class='header__date'>
+          <svg class='header__date__icon'>
+            <use href='./sprite.svg#icon-phone'></use>
+          </svg>
+          <div class='header__date__time'>
+            <p class='header__date__work'> <b>Пн - Пт:</b> 09:00 - 18:00</p>
+            <p class='header__date__work'> <b>Сб - Нд:</b> 10:00 - 16:00</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 const burger = document.querySelector('.header__burger');
-const headerMenu = document.querySelector('.header__menu');
+const headerMenu = document.querySelector('.header__bottom');
 const headerContacts = document.querySelector('.header__contacts');
 
 

@@ -43,8 +43,8 @@
     top: 24px;
     right:  24px;
     background-color:$primery-bgc;
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -57,9 +57,10 @@
 }
 .call-back__title{
     align-self: center;
-    font-size: 22px;
+    font-size: 24px;
+    font-weight: 500;
     line-height: 130%;
-    font-weight: normal;
+ 
     color: $color_black;
 }
 .call-back__close-icon {
@@ -71,7 +72,7 @@
 .call-back__text {
     display: flex;
     width: 50%;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 130%;
     font-weight: normal;
     color: $color_black;
@@ -89,14 +90,14 @@
 }
 .call-back__field {
     width: 100%;
-	height: 30px;
+	 
 	border: 2px solid $primery-text-color;
 	border-radius: 4px;
 	background-color: $primery-bgc;
 	color: $color_black;
 	z-index: 2;
-	padding: 0 12px;
-	font-size: 14px;
+	padding: 4 12px;
+	font-size: 16px;
 	font-weight: 400;
 	transition: $transition__stock;
 	&:hover,
@@ -105,23 +106,30 @@
 		border-color: $color_accent;
 	}
 }
-._tel {
+
+.call-back__field._error{
+    border-color: red;
 }
 .call-back__btn {
     display: flex;
 	justify-content: center;
 	align-items: center;
-    padding: 4px;
-    background-color: transparent;
+    padding: 8px;
+    background-color: $color_accent;
     transition: $transition__stock;
     outline: none;
     cursor: pointer;
-    border: 2px solid $primery-text-color;
+    border: 2px solid transparent;
 	border-radius: 4px;
-    color: $color_black;
+    color: $color_white;
     font-size: 16px;
     font-weight: 500;
-}
+    &:hover,
+    &:focus{
+        transform: scale(1.1);
+    }
+};
+
 @media screen and (max-width: 1440px){
     
     .call-back__text,
@@ -147,6 +155,9 @@
     .call-back__text,
     .call-back__form{
         width: 95%;
+    }
+    .call-back__text{
+        font-size: 16px;
     }
     
 

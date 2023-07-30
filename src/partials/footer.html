@@ -3,11 +3,33 @@
     <p>Created by:</p>
     <ul class="footer__created-list _list">
       <li class="footer__created-item">
-        <a class="footer__created-link _link" href="https://github.com/theGreatGrandfather" target="_blank" rel="noopener noreferrer">the Great Grandfather</a>
+        <a class="footer__created-link _link" href="https://github.com/theGreatGrandfather" target="_blank"
+          rel="noopener noreferrer">the Great Grandfather</a>
       </li>
       <li class="footer__created-item ">
-        <a class="footer__created-link _link" href="https://github.com/Taras-K" target="_blank" rel="noopener noreferrer">Taras-K</a>
+        <a class="footer__created-link _link" href="https://github.com/Taras-K" target="_blank"
+          rel="noopener noreferrer">Taras-K</a>
       </li>
     </ul>
+  </div>
+  <div class="backdrop  is-hidden" id='callBackdrop'>
+    <div class="modal">
+      <div class='call-back__decorative'>
+        <h3 class='call-back__title'>Замовити дзвінок</h3>
+        <button type="button" class="call-back__close" data-modal-close>
+          <svg class="call-back__close-icon">
+            <use href="./sprite.svg#icon-cross"></use>
+          </svg>
+
+        </button>
+      </div>
+
+      <p class='call-back__text'>Вкажіть ваш номер телефону та ім'я. Ми зателефонуємо вам найближчим часом.</p>
+      <form class="call-back__form" autocomplete="on">
+        <input class="_req _name call-back__field" type="text" minlength="2" name="name" placeholder="Ім'я">
+        <input class="_req _tel call-back__field" type="tel" name="tel" placeholder="Телефон">
+        <button type='submit' class='call-back__btn'>Надіслати</button>
+      </form>
+    </div>
   </div>
 </footer>

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Notiflix from 'notiflix';
 import { backdrop, body, modal } from './call-back';
 import { doModalClose } from '../contacts-modal';
 
@@ -46,13 +47,18 @@ const onSubmitCallBackBtn = () => {
                 return messageToTg;
             };
             sendMessage();
-            console.log('messageToTg', messageToTg)
-            axios.post(URI_API, {
+            try {
+                const responce = await axios.post(URI_API, {
                 chat_id: CHAT_ID,
                 parse_mode: 'html',
                 text: messageToTg,
-            }).then(resp => (console.log('resp', resp)))
-            .catch(err =>(console.log('err', err)))
+                })
+                if (responce.data.ok) {
+                    Notiflix.Notify.success(`Ми зв'яжемось з Вами найближчим часом`);
+                }
+            } catch (error) {
+                Notiflix.Notify.failure('Уупс! Щось пішло не так. Перезавантажте сторінку та сробуйте ще раз');
+            }
         }
     };
 

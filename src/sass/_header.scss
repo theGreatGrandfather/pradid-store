@@ -104,6 +104,10 @@ html,body{
 		color:$color_accent;
 		outline: none;
 	}
+	&:hover svg,
+	&:focus svg{
+		fill: $color_accent;
+	}
 }
 .header__contacts__link>p{
 	font-size: 24px;
@@ -339,19 +343,19 @@ body.lock{
 		fill:#474747;
 	}
 	.btn-call__text,
-	.basket__name,
-	.basket__sum{
+	.basket__name{
 		display: none;
 	}
-	.btn-call__icon {
+	.btn-call__icon, .header__top__icon {
 	display: flex;
-	width: 30px;
-	height: 30px;
+	width: 24px;
+	height: 24px;
+	padding: 0;
 }
 	.header__top-btn,
 	.basket__icon{
-		width: 30px;
-		height: 30px;
+		width: 24px;
+		height: 24px;
 		padding: 0;
 	}
 	
@@ -359,7 +363,7 @@ body.lock{
 		height: 50px;
 	}
 	.header__logo {
-		flex: 0 0 105px;
+		flex: 0 0 100px;
 		margin-left: 40px;
 	}
 	.header__top-search{
@@ -498,8 +502,8 @@ body.lock{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 30px;
-		height: 30px;
+		width: 24px;
+		height: 24px;
 		fill: #474747;
 		box-sizing: border-box;
 		
@@ -540,9 +544,15 @@ body.lock{
 		gap: 4px;
 	}
 }
-@media screen and (max-width: 375px){
+@media screen and (max-width: 374px){
 	 
 	.header__logo{
 		width: 85px;
+	}
+	.basket__sum{
+		display: none;
+	}
+	.basket__link{
+		gap: 0;
 	}
 }

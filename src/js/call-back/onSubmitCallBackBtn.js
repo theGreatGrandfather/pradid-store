@@ -1,4 +1,10 @@
-import { backdrop, onEscapeKeydowm, onCallBackClose, callBackClose, submitCallBackBtn } from './call-back';
+import axios from 'axios';
+import { backdrop, body, modal } from './call-back';
+import { doModalClose } from '../contacts-modal';
+
+const TOKEN = '6279094717:AAEINNI-WB8PTYW-nQglKgNdX6lALH6T6A0';
+const CHAT_ID = '-1001887598395';
+const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 const onSubmitCallBackBtn = () => {
     const modalForm = document.querySelector('.call-back__form');
@@ -16,11 +22,19 @@ const onSubmitCallBackBtn = () => {
         // });
 
         if (error === 0) {
+            modal.classList.toggle('active');
+            body.classList.toggle('lock');
             backdrop.classList.toggle('is-hidden');
-            document.removeEventListener("keydown", onEscapeKeydowm);
-            callBackClose.removeEventListener('click', onCallBackClose);
-            submitCallBackBtn.removeEventListener('click', onSubmitCallBackBtn);
             modalForm.reset();
+            doModalClose();
+
+
+            // backdrop.removeEventListener('click', onBackdrop);
+            // document.removeEventListener("keydown", onEscapeKeydowm);
+            // callBackClose.removeEventListener('click', onCallBackClose);
+            
+            
+                        
 
             let messageToTg = `<b>Заповлено зворотній дзвінок Pradid</b>\n`;
             function sendMessage() {
@@ -32,11 +46,13 @@ const onSubmitCallBackBtn = () => {
                 return messageToTg;
             };
             sendMessage();
-            // axios.post(URI_API, {
-            //     chat_id: CHAT_ID,
-            //     parse_mode: 'html',
-            //     text: messageToTg,
-            // });
+            console.log('messageToTg', messageToTg)
+            axios.post(URI_API, {
+                chat_id: CHAT_ID,
+                parse_mode: 'html',
+                text: messageToTg,
+            }).then(resp => (console.log('resp', resp)))
+            .catch(err =>(console.log('err', err)))
         }
     };
 

@@ -1,39 +1,23 @@
 import onSubmitCallBackBtn from './onSubmitCallBackBtn';
 
-const headerBtnCall = document.querySelector('.header__btn-call');
-const body = document.querySelector('body');
-export const backdrop = document.querySelector('#callBackdrop');
+export const headerBtnCall = document.querySelector('.contacts-modal-btn');
+export const body = document.querySelector('body');
+export const modal = document.querySelector('.modal');
+export const backdrop = document.querySelector('.backdrop');
 export const submitCallBackBtn = document.querySelector('.call-back__btn');
 export const callBackClose = document.querySelector('.call-back__close');
+export const modalForm = document.querySelector('.call-back__form');
 
-const onHeaderBtnCall = (e) => {
+export const onHeaderBtnCall = (e) => {
     e.preventDefault();
-    backdrop.classList.toggle('is-hidden');
-    document.addEventListener("keydown", onEscapeKeydowm);
-    callBackClose.addEventListener('click', onCallBackClose);
-    submitCallBackBtn.addEventListener('click', onSubmitCallBackBtn);
-
+    modal.classList.add('active');
+    callBackClose.addEventListener('click', onCallBackClose)
+    onSubmitCallBackBtn();
 }
 
-headerBtnCall.addEventListener('click', onHeaderBtnCall)
-
-export const onCallBackClose = (e) => {
-    console.log('e', e);
-    backdrop.classList.toggle('is-hidden');
-    callBackClose.removeEventListener('click', onCallBackClose);
-    document.removeEventListener("keydown", onEscapeKeydowm);
-    submitCallBackBtn.removeEventListener('click', onSubmitCallBackBtn)
-
+const onCallBackClose = (e) => {
+    console.log('onCallBackClose', e)
+    modal.classList.remove('active');
+    callBackClose.removeEventListener('click', onCallBackClose)
+    modalForm.reset();
 };
-
-export const onEscapeKeydowm = (e) => {
-    if (e.code === "Escape") {
-        backdrop.classList.toggle('is-hidden');
-        document.removeEventListener("keydown", onEscapeKeydowm);
-        callBackClose.removeEventListener('click', onCallBackClose);
-        submitCallBackBtn.removeEventListener('click', onSubmitCallBackBtn);
-
-    }
-};
-
-

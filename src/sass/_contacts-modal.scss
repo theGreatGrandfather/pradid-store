@@ -1,0 +1,39 @@
+.header__contacts-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom:-100%;
+    gap: 12px;
+    // bottom: -100%;
+    width: 100%;
+    height: fit-content;
+    overflow: scroll;
+    transition: all 0.3s ease 0s;
+    background-color: $primery-bgc;
+    padding: 55px 30px 40px 30px;
+    z-index: 4;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+.header__contacts-modal.active{
+    bottom: 0;
+    height: fit-content;
+    opacity: 1;
+
+}
+.contacts-modal__title {
+}
+.contacts-modal__list {
+}
+.header__contacts__link {
+}
+.btn-call__icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+}
+.contacts-modal-btn {
+}

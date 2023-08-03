@@ -1,0 +1,82 @@
+.hero__section {
+}
+.hero__container {
+}
+.book__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2vw;
+    flex-basis: calc((100vw - 100px) / 1);
+    
+    @media screen and (max-width: 768px){
+        gap: 20px;
+    }
+}
+.book__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color_white;
+    flex-basis: calc((100% - 10vw) / 6);
+    transition: $transition__stock;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    gap: 15px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    &:hover{
+     
+        border: 3px solid $color_accent;
+    
+    }
+    @media screen and (max-width: 1440px){
+        flex-basis: calc((100% - 4vw) / 5);
+    }
+    @media screen and (max-width: 1024px){
+        flex-basis: calc((100% - 4vw) / 4);
+    }
+    @media screen and (max-width: 768px){
+        flex-basis: calc((100% - 2vw) / 3);
+    }
+    @media screen and (max-width: 425px){
+        flex-basis: 100%;
+    }
+}
+
+.book__img {
+    display: flex;
+    width: 100%;
+}
+.book-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.book__price {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.book__btn {
+ 
+    margin-top: auto;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+    padding: 8px 52px;
+    background-color: $color_accent;
+    transition: $transition__stock;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+	border-radius: 4px;
+    color: $color_white;
+    font-size: 16px;
+    font-weight: 500;
+    &:hover,
+    &:focus{
+        transform: scale(1.1);
+    }
+}

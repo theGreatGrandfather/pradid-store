@@ -1,0 +1,20 @@
+._container{
+	width: 97%;
+	flex-basis: calc((100vw - 100px));
+	margin: 0px auto;
+	padding: 0px 10px;
+}
+
+._section {
+    margin: 150px 0;
+	top: 0;
+	left: 0;
+	background: #ffffff;
+	// z-index: 2;
+}
+
+@media screen and (max-width: 767px){
+    ._section{
+        margin: 60px 0;
+    }
+}

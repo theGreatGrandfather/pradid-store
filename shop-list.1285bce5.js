@@ -1,0 +1,2 @@
+!function(){document.querySelector(".basket__list");window.addEventListener("click",(function(e){if(e.target.hasAttribute("data-card")){var t=e.target.closest(".book__item"),o={id:t.dataset.id,img:t.querySelector(".book__img").getAttribute("src"),title:t.querySelector(".book-title").innerText,price:t.querySelector(".book__price").querySelector(".book__price__value").innerText};console.log("poductInfo",o);JSON.stringify(o);localStorage.setItem("1111",JSON.stringify(o))}}))}();
+//# sourceMappingURL=shop-list.1285bce5.js.map
